@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Frente Negra Brasileira: quiz de história</title>
+<meta name="description" content="Quiz sobre a Frente Negra Brasileira (1931–1937): fundação, lideranças, jornais, dissidência da Legião Negra, partido e extinção no Estado Novo.">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#e8ebe6;--ink:#101722;--muted:#4b5562;--gold:#8a5f00;--surface:#f5f6f3;--line:#b4bbb3;--ok:#1d6638;--bad:#a3262a;--head:"Libre Franklin","Helvetica Neue",Arial,sans-serif;--body:"Source Serif 4",Georgia,serif;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#0e131a;--ink:#e7eae4;--muted:#9ba4ae;--gold:#e2a92e;--surface:#161d26;--line:#2d3744;--ok:#72c48f;--bad:#f08e88;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#0e131a;--ink:#e7eae4;--muted:#9ba4ae;--gold:#e2a92e;--surface:#161d26;--line:#2d3744;--ok:#72c48f;--bad:#f08e88;color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--paper);color:var(--ink);font:1.0625rem/1.65 var(--body);-webkit-text-size-adjust:100%}
+.wrap{display:grid;grid-template-columns:minmax(220px,300px) minmax(0,1fr);gap:clamp(2rem,6vw,5rem);max-width:1080px;margin:0 auto;padding:clamp(1.5rem,5vw,4rem) clamp(1.1rem,4vw,2rem)}
+aside{align-self:start;position:sticky;top:2rem}
+.years{font:800 clamp(3.4rem,9vw,5.6rem)/.9 var(--head);letter-spacing:-.04em;margin:0}
+.years span{display:block;padding-left:.18em;border-left:.09em solid var(--gold);margin-left:.05em}
+h1{font:500 1rem/1.35 var(--head);margin:1.2rem 0 0;max-width:16rem}
+aside p{color:var(--muted);font-size:.9rem;margin:.6rem 0 0;max-width:17rem}
+h2{font:800 clamp(1.45rem,3.4vw,2rem)/1.2 var(--head);letter-spacing:-.015em;margin:0 0 1rem;outline:none}
+main{min-width:0;border-left:1px solid var(--line);padding-left:clamp(1.2rem,4vw,3rem)}
+.lead{max-width:36rem;margin:0 0 2rem}
+dl{margin:0 0 2.2rem;max-width:38rem}
+dl div{display:grid;grid-template-columns:4.2rem 1fr;gap:1rem;padding:.7rem 0;border-top:1px solid var(--line)}
+dt{font:800 1rem/1.6 var(--head);color:var(--gold)}
+dd{margin:0}
+button{font:inherit;color:inherit;cursor:pointer}
+.go{font:800 1rem var(--head);background:var(--ink);color:var(--paper);border:0;border-radius:2px;padding:.85rem 1.5rem;min-height:48px}
+.go:hover{background:var(--gold);color:#fff}
+.note{display:block;margin-top:.7rem;font-size:.85rem;color:var(--muted)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.bar{display:flex;gap:4px;margin:0 0 1.6rem}
+.bar i{flex:1;height:6px;background:var(--line);border-radius:1px}
+.bar i.now{background:var(--ink)}.bar i.ok{background:var(--ok)}.bar i.no{background:var(--bad)}
+.meta{display:flex;justify-content:space-between;gap:1rem;font:500 .9rem var(--head);color:var(--muted);margin:0 0 .8rem}
+#q{font-size:clamp(1.3rem,3vw,1.7rem)}
+ul{list-style:none;margin:0;padding:0;display:grid;gap:.65rem;max-width:40rem}
+.opt{display:flex;gap:.9rem;width:100%;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:2px;padding:.85rem 1rem;min-height:52px;line-height:1.45}
+.opt:hover:not(:disabled){border-color:var(--ink)}
+.opt:disabled{cursor:default;color:inherit}
+.opt .l{font:800 .95rem var(--head);color:var(--muted);min-width:1.3rem}
+.opt.right{border:2px solid var(--ok);padding:calc(.85rem - 1px) calc(1rem - 1px)}
+.opt.wrong{border:2px solid var(--bad);padding:calc(.85rem - 1px) calc(1rem - 1px)}
+#fb{max-width:40rem;margin-top:1.4rem;padding:1rem 0 0;border-top:2px solid var(--ink)}
+#fb strong{font-family:var(--head)}
+.good{color:var(--ok)}.bad{color:var(--bad)}
+#fb p{margin:.4rem 0 1.1rem}
+.big{font:800 clamp(3rem,10vw,5rem)/1 var(--head);letter-spacing:-.04em;margin:0}
+.review{max-width:40rem;margin:1.5rem 0 2rem;padding:0;display:block}
+.review li{padding:.8rem 0;border-top:1px solid var(--line)}
+.review b{font-family:var(--head)}
+h3{font:800 1.05rem var(--head);margin:2.2rem 0 .6rem}
+.src{font-size:.9rem;color:var(--muted);max-width:40rem;padding-left:1.1rem;list-style:disc;display:block}
+.src li{margin:.35rem 0}
+[hidden]{display:none!important}
+@media (max-width:820px){.wrap{grid-template-columns:1fr;gap:1.6rem}aside{position:static}main{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:1.6rem}.years{display:flex;gap:.3em}.years span{display:inline-block;margin:0}.years span+span{border-left:0;padding-left:0}h1,aside p{max-width:none}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<aside>
+<p class="years" aria-hidden="true"><span>1931</span><span>1937</span></p>
+<h1>Frente Negra Brasileira</h1>
+<p>Quiz de história sobre a maior organização negra da primeira metade do século XX no Brasil.</p>
+</aside>
+<main>
+<section id="intro">
+<h2>Do salão das Classes Laboriosas ao decreto do Estado Novo</h2>
+<p class="lead">São 16 questões sobre as pessoas, os acontecimentos e os marcos da Frente Negra. Cada resposta vem com uma explicação curta para você revisar o conteúdo enquanto joga.</p>
+<dl>
+<div><dt>1931</dt><dd>Em 16 de setembro, a FNB é fundada em São Paulo, no salão das Classes Laboriosas.</dd></div>
+<div><dt>1932</dt><dd>A direção opta pela neutralidade na Revolução Constitucionalista; dissidentes criam a Legião Negra.</dd></div>
+<div><dt>1933</dt><dd>Surge o jornal <i>A Voz da Raça</i>.</dd></div>
+<div><dt>1934</dt><dd>Em junho, Arlindo Veiga dos Santos deixa a presidência e Justiniano Costa assume.</dd></div>
+<div><dt>1936</dt><dd>A Frente é registrada como partido político.</dd></div>
+<div><dt>1937</dt><dd>O Estado Novo extingue todos os partidos, incluindo a FNB.</dd></div>
+</dl>
+<button class="go" type="button" id="start">Começar o quiz</button>
+<span class="note">Leva cerca de dez minutos. Nada fica salvo ao sair da página.</span>
+</section>
+
+<section id="quiz" hidden>
+<div class="bar" id="bar" role="img" aria-label="Progresso do quiz"></div>
+<p class="meta"><span id="count"></span><span id="tag"></span></p>
+<h2 id="q" tabindex="-1"></h2>
+<ul id="opts"></ul>
+<div id="fb" hidden aria-live="polite"></div>
+</section>
+
+<section id="result" hidden>
+<p class="big" id="pct"></p>
+<h2 id="rt" tabindex="-1"></h2>
+<p id="rs" class="lead"></p>
+<ul class="review" id="rv"></ul>
+<button class="go" type="button" id="again">Refazer o quiz</button>
+<h3>Fontes consultadas</h3>
+<ul class="src">
+<li>Petrônio Domingues, “Os descendentes de africanos vão à luta em Terra Brasilis”, <i>Projeto História</i> (PUC-SP), n. 33, 2006.</li>
+<li>Teresa Malatian, <i>O Cavaleiro Negro: Arlindo Veiga dos Santos e a Frente Negra Brasileira</i>. Alameda, 2015.</li>
+<li>Uziel Sant’Ana, “Frente Negra Brasileira: ascensão, estrutura e legado”, <i>Educação Sem Distância</i>, 2025.</li>
+<li>Fundação Perseu Abramo, “Frente Negra Brasileira: gestando um projeto político para o Brasil”.</li>
+<li>Alma Preta, “Apagados pela história, negros foram importantes combatentes na guerra civil de 1932”, 2019.</li>
+<li>Gazeta do Povo, “O primeiro (e único) partido negro da história do Brasil era de direita”.</li>
+<li>Estadão Conteúdo, “ONG vai pedir ao TSE reativação de partido negro extinto no Estado Novo”, maio de 2026.</li>
+<li>BlackPast e Encyclopedia.com, verbetes “Frente Negra Brasileira”.</li>
+</ul>
+<p class="note">Material de apoio ao estudo. Datas e nomes podem variar entre autores; confirme com a bibliografia da sua disciplina.</p>
+</section>
+</main>
+</div>
+<script>
+const Q=[
+{g:"Acontecimentos",q:"Em que data foi fundada a Frente Negra Brasileira?",o:["16 de setembro de 1931","13 de maio de 1931","3 de outubro de 1930","10 de novembro de 1937"],e:"A fundação oficial ocorreu em 16 de setembro de 1931, no salão das Classes Laboriosas, em São Paulo, 43 anos depois da abolição. Getúlio Vargas havia chegado ao poder pouco antes, no golpe de 3 de outubro de 1930."},
+{g:"Pessoas",q:"Quem foi o primeiro presidente da FNB?",o:["Arlindo Veiga dos Santos","José Correia Leite","Justiniano Costa","Abdias Nascimento"],e:"Arlindo Veiga dos Santos (1902–1978), professor, jornalista e literato nascido em Itu, presidiu a entidade até junho de 1934. Era chamado de “Cavaleiro Negro”, título do livro de Teresa Malatian sobre ele."},
+{g:"Pessoas",q:"Quem assumiu a presidência depois da saída de Arlindo, em 1934?",o:["Justiniano Costa, até então tesoureiro","Isaltino Veiga dos Santos","José Correia Leite","Vicente Ferreira"],e:"Justiniano Costa, que exercia a função de tesoureiro, presidiu a FNB de 1934 até a extinção da entidade, em 1937."},
+{g:"Pessoas",q:"Qual era a relação entre Isaltino e Arlindo Veiga dos Santos?",o:["Eram irmãos; Isaltino integrou o núcleo fundador e foi secretário-geral","Eram pai e filho; Isaltino foi o primeiro tesoureiro","Eram colegas de escola, sem parentesco, e lideraram a Legião Negra","Eram cunhados; Isaltino dirigia a filial do Rio de Janeiro"],e:"Isaltino Benedito Veiga dos Santos, irmão mais velho de Arlindo, fez parte do núcleo original e foi secretário-geral. Os dois ficaram conhecidos como “irmãos Veiga dos Santos”."},
+{g:"Pessoas",q:"José Correia Leite é lembrado na imprensa negra paulistana por qual jornal?",o:["O Clarim da Alvorada","A Voz da Raça","O Estado de S. Paulo","O Diário Popular"],e:"Correia Leite foi uma das lideranças históricas da FNB e esteve à frente de O Clarim da Alvorada. Já A Voz da Raça era o jornal da própria Frente, criado em 1933."},
+{g:"Acontecimentos",q:"Qual associação antecedeu a FNB e reuniu parte de seus futuros fundadores?",o:["Centro Cívico Palmares","Clube 13 de Maio","Teatro Experimental do Negro","Legião Negra"],e:"A FNB nasceu da organização de antigos membros do Centro Cívico Palmares, entidade que o próprio Arlindo Veiga dos Santos chegou a presidir."},
+{g:"Marcos",q:"Qual era o lema de A Voz da Raça, jornal criado pela FNB em 1933?",o:["“Deus, Pátria, Raça e Família”","“Liberdade, Igualdade, Fraternidade”","“Ordem e Progresso”","“Terra, Pão e Trabalho”"],e:"O lema resume o nacionalismo e o catolicismo que marcaram a liderança de Arlindo Veiga dos Santos. O jornal foi o principal veículo de comunicação da Frente."},
+{g:"Acontecimentos",q:"Em 1932, parte dos integrantes deixou a FNB. Por quê?",o:["A direção declarou neutralidade na Revolução Constitucionalista e os dissidentes fundaram a Legião Negra","A direção decidiu apoiar Vargas e os dissidentes abandonaram a política","A Frente foi proibida e seus membros passaram à clandestinidade","Houve disputa pelo uso do nome “Frente Negra” com o Rio de Janeiro"],e:"Arlindo declarou neutralidade no conflito entre São Paulo e o governo federal. Em 14 de julho de 1932, dissidentes como Joaquim Guaraná Santana e Vicente Ferreira criaram a Legião Negra, que lutou ao lado dos paulistas."},
+{g:"Marcos",q:"Qual destas iniciativas NÃO fazia parte da atuação da FNB?",o:["Manter uma milícia armada permanente","Escolas próprias e cursos de alfabetização","Cursos profissionalizantes","Atividades culturais, como eventos teatrais e musicais"],e:"A Frente investiu em educação (escolas próprias e alfabetização), assistência aos associados e lazer. Seu campo de atuação era o associativismo e a política, não a luta armada."},
+{g:"Marcos",q:"O que mostra que a FNB deixou de ser uma organização apenas paulista?",o:["A criação de delegações em outros estados, como Rio de Janeiro, Minas Gerais e Rio Grande do Sul","A eleição de um presidente nacional pelo voto popular em 1931","A transferência da sede para o Rio de Janeiro em 1933","A criação de um jornal em cada capital do país"],e:"A nacionalização do movimento ocorreu com filiais em vários estados, com maior concentração em São Paulo, Rio de Janeiro, Minas Gerais e Rio Grande do Sul."},
+{g:"Acontecimentos",q:"Qual reivindicação a FNB levou a Getúlio Vargas em uma audiência?",o:["A admissão de negros na Guarda Civil de São Paulo","A reforma agrária no interior paulista","A criação de uma universidade pública para negros","O fim do voto obrigatório"],e:"Segundo os relatos, a delegação denunciou que negros não eram aceitos na Guarda Civil paulista, e Vargas teria prometido 200 vagas. A proximidade com o governo torna a extinção de 1937 ainda mais marcante."},
+{g:"Marcos",q:"O que mudou na FNB em 1936?",o:["Foi registrada como partido político","Passou a ser filiada ao Partido Comunista","Foi transformada em sindicato","Elegeu seu primeiro deputado federal"],e:"Em 1936 a Frente obteve registro como partido, considerado o primeiro partido político negro do país. Não houve tempo de disputar eleições."},
+{g:"Marcos",q:"Como terminou a história da FNB?",o:["Foi extinta em 1937, quando Vargas dissolveu todos os partidos no Estado Novo","Foi dissolvida por votação dos associados após a derrota eleitoral de 1936","Foi incorporada ao Partido Integralista em 1935","Foi encerrada em 1945, com a queda de Vargas"],e:"O decreto de 2 de dezembro de 1937, que instaurou o Estado Novo, colocou na ilegalidade todos os partidos, inclusive a Frente Negra."},
+{g:"Pessoas",q:"Qual destes nomes está ligado ao Teatro Experimental do Negro, criado em 1944?",o:["Abdias Nascimento","Arlindo Veiga dos Santos","Justiniano Costa","Isaltino Veiga dos Santos"],e:"Abdias Nascimento fundou o TEN em 1944. A organização do movimento negro nos anos seguintes se apoiou na experiência política e cultural que a FNB havia acumulado."},
+{g:"Pessoas",q:"Laudelina de Campos Melo é lembrada por qual conquista?",o:["Fundou, em Santos, em 1936, a primeira associação de trabalhadoras domésticas do país","Presidiu a FNB entre 1934 e 1937","Foi a primeira deputada negra eleita em São Paulo","Comandou a Legião Negra na Revolução de 1932"],e:"Laudelina (1904–1991) militou no movimento negro paulista e organizou, em Santos, a primeira associação de trabalhadoras domésticas do Brasil, embrião do movimento sindical da categoria."},
+{g:"Acontecimentos",q:"Em 2026, uma ONG pediu ao TSE a reativação do partido da FNB. Qual é o argumento principal?",o:["O registro de 1936 não poderia ter sido anulado por decreto do Executivo","O partido nunca chegou a ter registro e quer obtê-lo agora","A FNB foi extinta por votação no próprio TSE","A Constituição de 1988 manda reabrir partidos extintos"],e:"A ONG Nova Frente Negra Brasileira, representada pelo advogado Hédio Silva Jr., sustenta que o registro concedido em 1936 pela Justiça Eleitoral não podia ser anulado por decreto. O caso foi noticiado em maio de 2026; confira o andamento."}
+];
+const $=s=>document.querySelector(s);
+let i=0,score=0,res=[],miss=[],cur=[],locked=false;
+function shuffle(a){for(let k=a.length-1;k>0;k--){const j=Math.floor(Math.random()*(k+1));[a[k],a[j]]=[a[j],a[k]]}return a}
+function show(id){["intro","quiz","result"].forEach(n=>$("#"+n).hidden=n!==id);window.scrollTo(0,0)}
+function bar(){$("#bar").innerHTML=Q.map((_,n)=>`<i class="${res[n]||(n===i?"now":"")}"></i>`).join("");$("#bar").setAttribute("aria-label","Questão "+(i+1)+" de "+Q.length)}
+function render(){
+const q=Q[i];locked=false;
+cur=shuffle(q.o.map((t,n)=>({t,ok:n===0})));
+$("#count").textContent="Questão "+(i+1)+" de "+Q.length;
+$("#tag").textContent=q.g;
+$("#q").textContent=q.q;
+$("#opts").innerHTML=cur.map((o,n)=>`<li><button type="button" class="opt" data-n="${n}"><span class="l">${"abcd"[n]})</span><span>${o.t}</span></button></li>`).join("");
+$("#fb").hidden=true;bar();$("#q").focus({preventScroll:true});
+}
+function answer(n){
+if(locked)return;locked=true;
+const q=Q[i],ok=cur[n].ok;
+if(ok)score++;else miss.push(i);
+res[i]=ok?"ok":"no";
+document.querySelectorAll(".opt").forEach((b,k)=>{b.disabled=true;if(cur[k].ok)b.classList.add("right");else if(k===n)b.classList.add("wrong")});
+const right=cur.find(o=>o.ok).t;
+$("#fb").innerHTML=`<strong class="${ok?"good":"bad"}">${ok?"Correto.":"Incorreto."}</strong>${ok?"":" Resposta certa: "+right}<p>${q.e}</p><button type="button" class="go" id="next">${i===Q.length-1?"Ver resultado":"Próxima questão"}</button>`;
+$("#fb").hidden=false;bar();
+$("#next").focus();
+$("#next").onclick=()=>{i++;i<Q.length?render():finish()};
+}
+function finish(){
+const pct=Math.round(score/Q.length*100);
+$("#pct").textContent=score+"/"+Q.length;
+$("#rt").textContent=pct>=80?"Você domina o assunto":pct>=50?"Bom caminho, com lacunas a revisar":"Vale reler o material e tentar de novo";
+$("#rs").textContent="Você acertou "+pct+"% das questões."+(miss.length?" Abaixo estão as que ficaram para revisão.":" Nenhuma questão para revisar.");
+$("#rv").innerHTML=miss.map(n=>`<li><b>${Q[n].q}</b><br>${Q[n].o[0]}<br><span style="color:var(--muted)">${Q[n].e}</span></li>`).join("");
+show("result");$("#rt").focus({preventScroll:true});
+}
+function start(){i=0;score=0;res=[];miss=[];show("quiz");render()}
+$("#start").onclick=start;$("#again").onclick=start;
+$("#opts").addEventListener("click",e=>{const b=e.target.closest(".opt");if(b)answer(+b.dataset.n)});
+</script>
+</body>
+</html>
